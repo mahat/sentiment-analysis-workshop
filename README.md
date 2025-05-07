@@ -29,4 +29,4 @@ Runs a single inference for the given text using the selected model and prompt.
 
 ## Adding New Prompts or Models
 
-Prompts and models are stored within the `experiments` package. This package contains classes that extend the base class defined in `experiment.py`. To add a new prompt or model, you can extend this base class, implement your own pipeline, and then add it to `main.py`.
+Prompts and models are stored within the `experiments` package. This package contains classes that extend the base class defined in `experiment.py`. To add a new prompt or model, you can extend this base class, or implement your own pipeline, and then add it to `main.py` models dict.
