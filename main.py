@@ -21,7 +21,7 @@ big_model_file_name = "Qwen2.5-1.5B-Instruct-IQ2_M.gguf"
 # load in context examples
 incontext_ds_small = load_from_disk("./data/incontext_small.hf")
 
-# using lambda function 
+# using lambda function for lazy loading 
 models = {
     "simple_prompt_small_llm": {
         "instance": lambda: simple_prompt_experiment.SimplePromptExperiment(
@@ -53,7 +53,6 @@ models = {
     },
 }
 
-
 def list_models():
     """
     Lists the available models.
@@ -63,8 +62,7 @@ def list_models():
 
 def run_model(model_name, text):
     """
-    Runs the specified text on the given model.
-
+    runs model name with text
     """
     if model_name not in models:
         return json.dumps({"error": f"Model '{model_name}' not found."})
