@@ -1,0 +1,52 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "imdb-movie-reviews",
+  "dataset_size": 66083508,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/ajaykarthick/imdb-movie-reviews@2537b681735c256a7ab829666b118e03c3eb9e0a/train.jsonl": {
+      "num_bytes": 53617757,
+      "checksum": null
+    },
+    "hf://datasets/ajaykarthick/imdb-movie-reviews@2537b681735c256a7ab829666b118e03c3eb9e0a/test.jsonl": {
+      "num_bytes": 13260879,
+      "checksum": null
+    }
+  },
+  "download_size": 66878636,
+  "features": {
+    "review": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "dtype": "int64",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 132962144,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 52981665,
+      "num_examples": 40000,
+      "dataset_name": "imdb-movie-reviews"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 13101843,
+      "num_examples": 10000,
+      "dataset_name": "imdb-movie-reviews"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
