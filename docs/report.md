@@ -159,7 +159,7 @@ One observation is that when increasing repeat_penalty, f1 is affected heavily b
 
 ### Overall Results
 
-The best f1 is coming from CoT prompt. However, it generates non valid answers. On the other hand, simple prompt using small looks robusts in terms of performance and accuracy. But, overall greatest potential is few shot prompt but it requires more carefull design. 
+The best f1 is coming from CoT prompt. However, it generates non valid answers. On the other hand, simple prompt using small looks robusts in terms of performance and accuracy. But, overall greatest potential is few shot prompt but it requires more carefull design. You can find experiment logs in ./log folder
 
 ### Final Thoughts
 

@@ -21,6 +21,11 @@ uv run main.py run --model <model_name> --text <text>
 ```
 Runs a single inference for the given text using the selected model and prompt.
 
+If you want to run all experiments in main file you can run 
+```console
+uv run main.py eval --ds_path ./data/test.hf --out_path ./logs
+```
+
 ## Project Structure
 
 * **experiments:** Contains prompt and model definitions used for running experiments.

@@ -79,11 +79,13 @@ def main():
     Main function to parse command-line arguments.
     """
     parser = argparse.ArgumentParser(description="CLI for interacting with models.")
-    parser.add_argument("command", choices=["list", "run"], help="Command to execute.")
+    parser.add_argument("command", choices=["list", "run", "eval"], help="Command to execute.")
     parser.add_argument(
         "--model", help="Name of the model to use with the 'run' command."
     )
     parser.add_argument("--text", help="Text to process with the 'run' command.")
+    parser.add_argument("--out_path", help="output directory with the 'eval' command")
+    parser.add_argument("--ds_path", help="Dataset Path to process with the 'eval' command.")
 
     args = parser.parse_args()
 
@@ -102,6 +104,9 @@ def main():
             sys.exit(1)
         result = run_model(args.model, args.text)
         print(result)
+    elif args.command == "eval":
+        utils.experiment_runner(models=models,ds_path=args.ds_path, out_path=args.out_path)
+        print(f'Evaluation completed you can find the results in: {args.out_path}')
     else:
         print(json.dumps({"error": "Invalid command."}))  # Should never reach here
         sys.exit(1)
